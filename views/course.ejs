@@ -1,0 +1,44 @@
+<%- include("header")  -%>
+
+
+<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">  
+    <!--Card 1-->
+    <% subjects.forEach(subject => { %>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg hover:bg-purple-200">
+      
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2"><%= subject.subjectName %> (<%= subject.subjectCode %>)</div>
+        <p class="text-gray-700 text-base">
+          <%= (subject.courseOutcome).substring(0, 150) %>....
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><%= subject.subjectCode %></span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><%= subject.type %></span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">credits: <%= subject.totalCradits %></span>
+      </div>
+    </div>
+    <% }) %>
+
+    <!--Card 2-->
+    <!-- <div class="max-w-sm rounded overflow-hidden shadow-lg hover:bg-purple-200">
+      
+      <div class="px-6 py-4">
+        <div class="font-bold text-xl mb-2">Internet of Things (BTCS 602)</div>
+        <p class="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">BTCS602</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">diff: medium</span>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">cradits: 4</span>
+      </div>
+    </div> -->
+
+
+  </div>
+
+  
+
+<%- include("footer")  -%>

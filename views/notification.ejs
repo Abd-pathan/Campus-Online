@@ -1,0 +1,129 @@
+<%- include("header")  -%>
+
+<% if(user.role === 'admin'){ %>
+
+<form action="/updateNotification" method="GET">
+  <button class="mt-8 ml-10  bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full ">
+    +  UPDATE
+  </button>
+</form>
+
+<% } %>
+
+<div class="px-4 pt-12 sm:px-6 ">
+    <h2 class="text-lg leading-6 font-medium text-gray-900">
+      List of Upcomming Events
+    </h2>
+    
+</div>
+
+
+<% notifications.forEach(notification => { %>
+<div class="bg-white rounded-lg flex justify-between items-center ml-20 mr-20 mt-10 mb-5">
+    <div class="flex">
+      <div class="mr-4">
+         <img class="shadow sm:w-12 sm:h-12 w-14 h-14 rounded-full" src="<%= notification.avatar ? notification.avatar : './img/male.svg' %>" alt="Avatar" />
+      </div>
+      <div>
+        <h1 class="text-xl font-medium text-gray-700"><%= notification.title %></h1>
+        <p class="text-gray-600"><%= (notification.details).substring(0,120) %>....</p>
+      </div>
+    </div> 
+    <% if(notification.link){ %>  
+    <a href = "<%= notification.link %>">
+    <button class="bg-blue-500 hover:opacity-75 text-white rounded-full px-8 py-2">
+      Register Link
+    </button></a>
+    <% } %>
+</div>
+<% }) %>
+  
+<!-- <div class="px-4 py-12 sm:px-6">
+    <h2 class="text-lg leading-6 font-medium text-gray-900">
+      List of Upcomming Companies
+    </h2>
+    
+</div>
+
+
+
+
+  
+<div class="bg-white  rounded-lg flex justify-between items-center ml-20 mr-20 mb-5">
+    <div class="flex">
+      <div class="mr-4">
+         <img class="shadow sm:w-12 sm:h-12 w-14 h-14 rounded-full" src="./img/capgemini.jpg" alt="Avatar" />
+      </div>
+      <div>
+        <h1 class="text-xl font-medium text-gray-700">Capgemini</h1>
+        <p class="text-gray-600">A global leader in consulting, technology services and digital transformation</p>
+      </div>
+    </div>   
+    <a href = "https://www.capgemini.com/"
+    <button class="bg-blue-500 hover:opacity-75 text-white rounded-full px-8 py-2">
+      Register Link
+    </button></a>
+</div>
+  
+  
+  
+  
+<div class="bg-white  rounded-lg flex justify-between items-center ml-20 mr-20 mb-5">
+    <div class="flex">
+      <div class="mr-4">
+         <img class="shadow sm:w-12 sm:h-12 w-14 h-14 rounded-full" src="./img/cognizant.jpg" alt="Avatar" />
+      </div>
+      <div>
+        <h1 class="text-xl font-medium text-gray-700">Cognizant</h1>
+        <p class="text-gray-600">The power of today's new digital capabilities is vast and growing.</p>
+      </div>
+    </div>
+     
+    <a href = "https://www.cognizant.com/"
+    <button class="bg-blue-500 hover:opacity-75 text-white rounded-full px-8 py-2">
+      Register Link
+    </button></a>
+</div>
+
+  
+<div class="bg-white  rounded-lg flex justify-between items-center ml-20 mr-20 mb-5">
+    <div class="flex">
+      <div class="mr-4">
+         <img class="shadow sm:w-12 sm:h-12 w-14 h-14 rounded-full" src="./img/ibm.jpg" alt="Avatar" />
+      </div>
+      <div>
+        <h1 class="text-xl font-medium text-gray-700">IBM</h1>
+        <p class="text-gray-600">For more than a century IBM has been dedicated to every client's success and to creating innovations that matter for the world.</p>
+      </div>
+    </div>   
+    <a href = "https://www.ibm.com/in-en"
+    <button class="bg-blue-500 hover:opacity-75 text-white rounded-full px-8 py-2">
+      Register Link
+    </button></a>
+</div>
+
+
+  
+<div class="bg-white  rounded-lg flex justify-between items-center ml-20 mr-20 mb-5">
+    <div class="flex">
+      <div class="mr-4">
+         <img class="shadow sm:w-12 sm:h-12 w-14 h-14 rounded-full" src="./img/tcs.jpg" alt="Avatar" />
+      </div>
+      <div>
+        <h1 class="text-xl font-medium text-gray-700">TCS</h1>
+        <p class="text-gray-600">Tata Consultancy Services is a global leader in IT services, consulting & business solutions with a large network of innovation & delivery centers</p>
+      </div>
+    </div>   
+    <a href = "https://www.tcs.com/"
+    <button class="bg-blue-500 hover:opacity-75 text-white rounded-full px-8 py-2">
+      Register Link
+    </button></a>
+</div>
+ -->
+
+
+
+
+
+
+<%- include("footer")  -%>

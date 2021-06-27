@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1/dist/tailwind.min.css" rel="stylesheet">
+    <title>Welcome to Campus Online</title>
+
+
+    <style>
+        
+
+        body {
+            background-color: powderblue;
+	    background-image: url('img/bg.jpg');
+	    background-repeat: no-repeat;
+  		background-attachment: fixed;
+ 		 background-size: 100% 100%;
+        }
+
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+<section class="login flex justify-center pt-24">
+<div class="w-full max-w-xs">
+
+
+	<form action ="/" class="bg-gray-300 bg-opacity-75 shadow-md rounded-lg px-8 pt-5 pb-8 mb-4" method ="POST">
+
+        <div class="flex justify-center mb-10">
+        <div class="w-1/2 h-1/2 rounded-full border-4">
+            <img src="img/logo4.jpg">
+        </div>
+        </div>
+        <% if(messages.error) { %>
+            <span class="text-red-500 text-sm"><%= messages.error %></span>
+        <% } %>
+    
+	
+
+    <div class="one mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            Email
+        </label>
+        <input type="email" name="email" class="form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Your Email" required autofocus><br>
+    </div>
+
+    <div class="two mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            Password
+        </label>
+       <input type="password" name="password"  class="form-control shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter Your Password " required autofocus>
+        <br>
+    </div>
+
+    <div class="three">
+        <button class="w-100 btn btn-lg btn-primary rounded-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" id="myButton" type="submit"><b>Login</b></button><br>
+    </div>
+
+    <p class="font-bold text-center text-gray-700 text-xs mt-5">&copy; 2021 AndyPath</p>
+	
+	</form>
+
+</div>
+</section>>
+</body>
+</html>

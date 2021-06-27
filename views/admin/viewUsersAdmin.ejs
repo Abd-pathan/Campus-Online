@@ -1,0 +1,113 @@
+<%- include("../header")  -%>
+<h1  class="font-bold text-4xl text-center m-5"> View Admins Here</h1>
+
+
+<div class="flex flex-1 justify-center">
+
+   
+      
+      
+      
+
+      
+
+   </div>
+   <div class="mx-5 pt-10 border-t-2 border-gray-400"></div>
+
+    
+    
+    
+<div class="flex justify-center mr-10 mb-10">
+    
+    <div class="flex flex-col">
+      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+          <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+            
+
+              
+            <input type="text" name="allFaculties" id="allFaculties" value="" hidden>
+            <table class="min-w-full divide-y divide-gray-200">
+              
+              <thead class="bg-gray-50">
+                <tr>
+                  <th scope="col" class="px-6 py-3 text-left text-l font-medium text-gray-500 uppercase tracking-wider">
+                    Name
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-left text-l font-medium text-gray-500 uppercase tracking-wider">
+                    Registration Number
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-left text-l font-medium text-gray-500 uppercase tracking-wider">
+                    Email ID
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200" id="studentTable">
+              
+
+
+                <% keyVUA.forEach( (eachAdmin) => {%>
+
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                      <div class="ml-0">
+                      <div class="text-sm font-medium text-gray-900">
+                       <%=  eachAdmin.name %>
+                      </div>
+                      </div>
+                  </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="text-sm text-gray-900"><%= eachAdmin.registrationNumber%> </div>
+                  </td>
+      
+                  <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="text-sm text-gray-900"><%= eachAdmin  .email%> </div>
+                  </td>
+      
+                  </tr>  
+
+               <% })%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               
+
+          </tbody>
+            </table>
+    
+            
+               
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+
+
+ 
+
+
+<%- include("../footer")  -%>

@@ -1,0 +1,49 @@
+<%- include("header")  -%>
+
+<h1  class="font-bold text-gray-600 text-xl mt-6 text-center mb-10" style="font-size:40px">Attendance: <%= subject %></h1>
+
+<input name="arrayData" id="arrayData" value="<%= JSON.stringify({arrayDate, arrayMonth}) %>" hidden>
+
+
+<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10">
+<div><canvas id="myChart" width="100" height="50"></canvas></div>
+
+<div class="m-10">
+    <table style="width:100%" class="border-t-4 border-b-4 border-l-4 border-r-4 border-gray-500 text-center">
+
+
+
+
+      <thead class="bg-gray-50">
+        <tr class="border-b-2 border-gray-500">
+          <th class="border-r-2 border-gray-500 px-6 py-3 text-left text-l font-bold text-gray-600 uppercase tracking-wider text-center">Date</th>
+          <th class="border-gray-500 px-6 py-3 text-left text-l font-bold text-gray-600 uppercase tracking-wider text-center">Status</th>
+          
+        </tr>
+      </thead>
+
+
+
+
+      <tbody>
+
+        <% lectures.forEach(lecture => { %>
+        
+        <tr class="border-b-2 border-gray-500">
+          <td class="border-r-2 border-gray-500 px-6 py-3 <%= lecture.status==='present' ? 'text-blue-700' : 'text-red-700' %> "><%= lecture.date %></td>
+          <td class="border-gray-500 px-6 py-3 uppercase <%= lecture.status==='present' ? 'text-blue-700' : 'text-red-700' %>"><%= lecture.status %></td>
+          
+        </tr>
+        <% }) %>
+        <!-- <tr class="border-t border-b border-gray-500">
+          <td class="border-r border-gray-500">2</td>
+          <td class="border-r border-gray-500">1</td>
+        </tr> -->
+        </tbody>
+      </table>
+</div>
+
+</div>
+
+<script src="./js/chart.js"></script>
+<%- include("footer")  -%>
