@@ -1,5 +1,5 @@
 # Campus-Online
-Colllege Management | Node JS | Express JS | MongoDB 
+Colllege Management System | Node JS | Express JS | MongoDB 
 
 
 ‘Campus Online’ is a Web-Based Application that has a Bunch of Functionalities and Features. ‘Campus Online’ full fill all the Necessary Requirements of Students and faculties. Among All the other College software, ‘Campus Online’ has a wide variety of features.
